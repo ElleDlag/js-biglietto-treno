@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding:0;
+}
+:root{
+    --color:255,255,255;
+}
+nav, main{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+/* #region  NAVBAR */
+.navigation a{
+    display: block;
+    padding:12px 30px;
+}
+.navigation li{
+    background:rgb(var(--color));
+    margin:0 8px;
+    font-weight:600;
+    position: relative;
+}
+.navigation li .fas{
+    margin-right: 8px;
+    opacity:0.6
+}
+.navigation li:nth-child(1){
+    --color:247, 189, 88;
+}
+.navigation li:nth-child(2){
+    --color:199, 255, 136
+}
+.navigation li:nth-child(2) .fas{
+    transform: rotateY(180deg);
+}
+.navigation li:nth-child(3){
+    --color:163, 234, 255
+}
+.navigation li:nth-child(4){
+    --color:207, 191, 255
+}
+li:hover:after{
+    content: "coming soon...";
+    display: block;
+    width: 150px;
+    height: 100%;
+    top: 114%;
+    left: 50%;
+    transform: translateX(calc(-50% - 15px));
+    position: absolute;
+    line-height: 40px;
+    color: white;
+    border-radius: 8px;
+    background: rgb(38, 36, 36);
+    box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+}
+li:hover:before{
+    content:"";
+    display: block;
+    position: absolute;
+    width:15px;
+    height:15px;
+    top:95%;
+    left:50%;
+    transform: translateX(-50%) rotate(45deg);
+    background: rgb(38, 36, 36);
+    box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+}
+/* #endregion */
+
+.prompt_result{
+    padding:100px 15px;
+}
+.verify{
+    margin-left:15px;
+    text-align: left;
+}
+.verify .fas{
+    margin-right:8px;
+}
+#view-result{
+    display: none;
+}
+.verify label{
+    display: block;
+    background: #2557fc;
+    width:80px;
+    margin: 30px auto 0;
+    padding:8px 16px;
+    border-radius:4px;
+    color:white
+}
+#view-result:checked ~ .meter-value{
+    display: block;
+}
+.meter-value{
+    width:300px;
+    margin: 20px auto 0;
+    height:8px;
+    background: #ebebeb;
+    border-radius: 4px;
+    position: relative;
+    display: none;
+}
+
+.meter-value:after{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height:100%;
+    top:0;
+    left:0;
+    background: red;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    animation: meter 1s ease-in-out forwards;
+   
+}
+
+@keyframes meter{
+    0%{width: 0%;}
+    100%{width: 15%;}
+}
