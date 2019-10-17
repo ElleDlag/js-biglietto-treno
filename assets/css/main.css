@@ -1,37 +1,45 @@
 body{
-    background:#ff882d url("../img/trainSpeed.svg") no-repeat;
-    background-position: 50%;
+    background:linear-gradient(to top, #ff882d 10%,#0072b8 )
 }
 .wrapper{
-    border:1px solid red;
+    background:url("../img/train2.svg") no-repeat;
+    background-size: 130%;
+    background-position: 50% 0%;
     max-width: 1200px;
     height:100vh;
     margin: auto;
 }
+.nav-fixed{
+    padding:10px;
+    background:#46a9ff ;
+}
 .main-navbar{
     display:flex;
-    border:1px solid red;
     align-items: center;
-}
-.main-navbar>*{
-
-    border:1px solid red;
+   
 }
 .nav-brand{
     flex:1;
     text-align:left;
     padding:0 20px;
+    color:#fff
+}
+.nav-brand .mini-brand{
+    font-size:0.6em
 }
 #nav-search{
     padding-left:10px;
-    border:1px solid #ff882d;
-    background: rgba(255, 136, 45, 0.2);
-    border-radius: 4px;
-    margin-right: 10px;;
+    border:none;
+    border-bottom:3px solid #fff;
+    background: rgba(57, 57, 57, 0.2);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-right: 10px;
+    color:#fff
 }
 #nav-search::placeholder{
     padding-left:1px;
-    color:rgba(0, 0, 0, .2)
+    color:rgba(255, 255, 255, .6)
 }
 #nav-search:focus{
     outline:none
