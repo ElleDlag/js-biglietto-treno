@@ -1,124 +1,54 @@
-*{
-    margin:0;
-    padding:0;
+body{
+    background:#ff882d url("../img/trainSpeed.svg") no-repeat;
+    background-position: 50%;
 }
-:root{
-    --color:255,255,255;
-}
-nav, main{
+.wrapper{
+    border:1px solid red;
     max-width: 1200px;
+    height:100vh;
     margin: auto;
-    text-align: center;
 }
-/* #region  NAVBAR */
-.navigation a{
-    display: block;
-    padding:12px 30px;
+.main-navbar{
+    display:flex;
+    border:1px solid red;
+    align-items: center;
 }
-.navigation li{
-    background:rgb(var(--color));
-    margin:0 8px;
-    font-weight:600;
-    position: relative;
-}
-.navigation li .fas{
-    margin-right: 8px;
-    opacity:0.6
-}
-.navigation li:nth-child(1){
-    --color:247, 189, 88;
-}
-.navigation li:nth-child(2){
-    --color:199, 255, 136
-}
-.navigation li:nth-child(2) .fas{
-    transform: rotateY(180deg);
-}
-.navigation li:nth-child(3){
-    --color:163, 234, 255
-}
-.navigation li:nth-child(4){
-    --color:207, 191, 255
-}
-li:hover:after{
-    content: "coming soon...";
-    display: block;
-    width: 150px;
-    height: 100%;
-    top: 114%;
-    left: 50%;
-    transform: translateX(calc(-50% - 15px));
-    position: absolute;
-    line-height: 40px;
-    color: white;
-    border-radius: 8px;
-    background: rgb(38, 36, 36);
-    box-shadow: 1px 1px 5px rgba(0,0,0,.3);
-}
-li:hover:before{
-    content:"";
-    display: block;
-    position: absolute;
-    width:15px;
-    height:15px;
-    top:95%;
-    left:50%;
-    transform: translateX(-50%) rotate(45deg);
-    background: rgb(38, 36, 36);
-    box-shadow: 1px 1px 5px rgba(0,0,0,.3);
-}
-/* #endregion */
+.main-navbar>*{
 
-.prompt_result{
-    padding:100px 15px;
+    border:1px solid red;
 }
-.verify{
-    margin-left:15px;
-    text-align: left;
+.nav-brand{
+    flex:1;
+    text-align:left;
+    padding:0 20px;
 }
-.verify .fas{
-    margin-right:8px;
+#nav-search{
+    padding-left:10px;
+    border:1px solid #ff882d;
+    background: rgba(255, 136, 45, 0.2);
+    border-radius: 4px;
+    margin-right: 10px;;
 }
-#view-result{
-    display: none;
+#nav-search::placeholder{
+    padding-left:1px;
+    color:rgba(0, 0, 0, .2)
 }
-.verify label{
-    display: block;
-    background: #2557fc;
-    width:80px;
-    margin: 30px auto 0;
-    padding:8px 16px;
-    border-radius:4px;
-    color:white
+#nav-search:focus{
+    outline:none
 }
-#view-result:checked ~ .meter-value{
-    display: block;
-}
-.meter-value{
-    width:300px;
-    margin: 20px auto 0;
-    height:8px;
-    background: #ebebeb;
+.user-link{
+    background:#393939;
     border-radius: 4px;
     position: relative;
-    display: none;
+    width:45px;
+    height: 40px;
 }
-
-.meter-value:after{
+.nav-list .fas{
     position: absolute;
-    content: "";
-    width: 0%;
-    height:100%;
-    top:0;
-    left:0;
-    background: red;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    animation: meter 1s ease-in-out forwards;
-   
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color:#fff;
+    font-size:2em;
 }
 
-@keyframes meter{
-    0%{width: 0%;}
-    100%{width: 15%;}
-}

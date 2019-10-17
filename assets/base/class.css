@@ -9,7 +9,13 @@ a{
 ul,li{
     list-style-type: none;
 }
+h1,h2,h3,h4,h5,h6{
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:0;
+    margin-right:0;
+    padding:0;
+}
 h1{
     text-transform: uppercase;
-    padding:20px 0;
 }
