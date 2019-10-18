@@ -137,16 +137,22 @@ main{
 .group-control {
     margin-top:30px;
     width:100%;
-    border: 1px solid red;
     justify-content: flex-end;
 }
 .group-control>*{
     flex-basis: 150px;
+    text-align: left;
 }
 .group-control .sale-application{
    margin-right: 20px;
 }
-
+.result{
+    font-size: 0.9em;
+    font-weight: 600;
+    font-family: monospace;
+    margin-top: 15px;
+    color:#393939
+}
 
 
 #lead-check:checked ~ .lead-change .lead-info{
