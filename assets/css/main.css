@@ -82,7 +82,8 @@ main{
 .lead-change{
     overflow: hidden;
     position: relative;
-    height:75%;
+    height:520px;
+    max-height:520px;
     max-width:1000px;
     margin: auto;
     border-radius: 30px;
@@ -100,13 +101,11 @@ main{
     height:100%;
     display: flex;
     padding: 30px 0;
-   /*  transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out; */
+    transition: all 1s ease-in-out;
 }
 .lead-info.form{
     transform: translateX(-150%);
-  /*   transition: all 1s ease-in-out 10ms;
-    -webkit-transition: all 10ms ease-in-out; */
+    transition: all 1s ease-in-out 10ms;
 }
 .lead-info-right{
     flex-basis: 25%;
@@ -172,7 +171,7 @@ main{
 
 
 
-@media screen and (max-width:910px){
+@media (max-width:910px){
 
     .lead-info{
         display: flex;
@@ -188,7 +187,7 @@ main{
     }
 }
 
-@media screen and (max-width:750px){
+@media (max-width:750px){
     .lead-info-right{
         font-size:0.8em
     }
@@ -200,12 +199,12 @@ main{
        margin-right:8px;
     }
 }
-@media screen and (max-width:767px){
+@media (max-width:767px){
     .lead-change{
         overflow-y: auto;
     }
 }
-@media screen and (max-width:595px){
+@media (max-width:595px){
     .lead-info-right{
         font-size:0.5em
     }
