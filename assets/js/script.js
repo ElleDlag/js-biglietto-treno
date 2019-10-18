@@ -25,10 +25,9 @@ function checkThis(){
         var kms = parseInt(destination.value);
         var price = kms * 0.21;
         var sale;
-        var ageTxtSale
-        
-        
+        var ageTxtSale;
         age = currentDate.getFullYear() - born.value;
+
         if(age >=65){
             ageTxtSale="over 65 - 40%";
             txtSale.textContent = "40%";
@@ -45,6 +44,8 @@ function checkThis(){
             txtSale.textContent = "NO"
             txtTot.textContent = price + " €";
         };
+
+        //tesxt result via concatenation
         result.innerHTML = "Biglietto nominativo per: " + nome.value + " " + cognome.value +"<br>";
         result.innerHTML+= "Partenza:Milano Centrale<br>";
         result.innerHTML+= "Destinazione in Km: " + destination.value +" km <br>";
@@ -72,4 +73,5 @@ function checkThis(){
     };
 };
 
+//injecton
 checkAll.addEventListener("click",checkThis);
