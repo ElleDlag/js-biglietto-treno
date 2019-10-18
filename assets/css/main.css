@@ -1,9 +1,6 @@
-html{
-    height:100vh
-}
 body{
-    background:url("../img/train2.svg") no-repeat, linear-gradient(to top, #ff882d 10%,#0072b8 );
-    height:100%;
+    background:url(../img/train2.svg) no-repeat, linear-gradient(to top, #ff882d 10%,#0072b8 ) no-repeat;
+    height:100vh;
     background-size: 130%;
     background-position: 50% bottom;
     background-origin:left top;
@@ -14,11 +11,13 @@ body{
     margin: auto;
     padding:0 15px;
 }
+
 /* #region  navbar */
+
 .nav-fixed{
     padding:10px;
     background:#46a9ff ;
-    box-shadow: 0px 1px 30px rgba(56, 56, 56, 0.5)
+    box-shadow: 0px 1px 30px rgba(56, 56, 56, 0.5);
 }
 .main-navbar{
     display:flex;
@@ -71,8 +70,9 @@ body{
 main{
     flex-grow: 1;
     margin-top: 60px;
-
+    flex-basis: 0%;
 }
+
 #lead-check{
     display: none;
 }
@@ -126,7 +126,6 @@ main{
     margin-bottom:30px;
 }
 .lead-info-left>*{
-
     max-width: 600px;
 }
 .lead-info .fas{
@@ -163,6 +162,10 @@ main{
 #lead-check:checked ~ .lead-change .lead-info.form{
     transform: translateX(-50%);
     display: flex;
+}
+
+footer{
+    margin: auto;
 }
 
 
