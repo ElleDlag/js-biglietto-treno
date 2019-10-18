@@ -4,14 +4,20 @@ body{
     background-size: 130%;
     background-position: 50% bottom;
     background-origin:left top;
+    position: relative;
 }
 .wrapper{
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    width:100%;
     max-width: 1200px;
     height:100%;
-    margin: auto;
     padding:0 15px;
-}
+    position: fixed;
+    overflow: auto;
 
+}
 /* #region  navbar */
 
 .nav-fixed{
