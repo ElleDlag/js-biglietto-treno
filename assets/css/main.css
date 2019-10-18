@@ -170,7 +170,7 @@ main{
 
 
 
-@media (max-width:910px){
+@media screen and (max-width:910px){
 
     .lead-info{
         display: flex;
@@ -186,7 +186,7 @@ main{
     }
 }
 
-@media (max-width:750px){
+@media screen and (max-width:750px){
     .lead-info-right{
         font-size:0.8em
     }
@@ -198,12 +198,12 @@ main{
        margin-right:8px;
     }
 }
-@media (max-width:767px){
+@media screen and (max-width:767px){
     .lead-change{
         overflow-y: auto;
     }
 }
-@media (max-width:595px){
+@media screen and (max-width:595px){
     .lead-info-right{
         font-size:0.5em
     }
