@@ -94,15 +94,15 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-4">
                                         <label for="nome">Nome</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="Nome">
+                                        <input type="text" class="form-control" id="nome" placeholder="Nome" required>
                                         </div>
                                         <div class="form-group col-md-4">
                                         <label for="cognome">Cognome</label>
-                                        <input type="text" class="form-control" id="cognome" placeholder="Cognome">
+                                        <input type="text" class="form-control" id="cognome" placeholder="Cognome" required>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="anno-nascita">Anno di nascita</label>
-                                            <select id="anno-nascita" class="form-control">
+                                            <select id="anno-nascita" class="form-control" required>
                                                 <option selected>Selezionare anno...</option>
                                                 <option value="1900">1900</option>
                                                 <option value="1901">1901</option>
@@ -239,7 +239,7 @@
                                     </div>
                                     <div class="form-row">
                                         <label for="destinazione">Destinazione</label>
-                                        <select id="destinazione" class="form-control">
+                                        <select id="destinazione" class="form-control" required>
                                             <option selected>Selezionare destinazione...</option>
                                             <option value="48">Malpensa Aeroporto T-2 48km</option>
                                             <option value="48">Malpensa Aeroporto T-1 48km</option>
@@ -257,7 +257,8 @@
                                             <div class="sale-application">
                                             Sconto: <span id="txt-sconto"></span>
                                             </div>
-                                            <a href="#" class="btn btn-primary check-all">TOTALE: <span id="txt-totale"></span></a>
+                                            <label id="txt-totale" for="subtot">TOTALE: </label> <input type="submit" id="subtot" class="btn btn-primary check-all"/>
+                                            <!-- <span href="#" class="btn btn-primary check-all">TOTALE: <span id="txt-totale"></span></a> -->
                                         </div>
                                     </div>
                                     <div class="result">
